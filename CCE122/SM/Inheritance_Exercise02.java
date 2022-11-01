@@ -1,6 +1,10 @@
 class Parent {
-    public void printInfoParent() {
+    private void printInfoParent() {
         System.out.println("This is parent class.");
+    }
+
+    public void callPrintInfoParent() {
+        printInfoParent();
     }
 }
 
@@ -10,12 +14,15 @@ class Child extends Parent {
     }
 }
 
-class InEx01 {
+class Inheritance_Exercise02 {
     public static void main(String[] args) {
         Parent parentObj = new Parent();
         Child childObj = new Child();
-        parentObj.printInfoParent();
+
+        // parentObj.printInfoParent();
+        // Error: printInfoParent() has private access in Parent
+        // Using callPrintInfoParent() to call printInfoParent()
+        parentObj.callPrintInfoParent();
         childObj.printInfoChild();
-        childObj.printInfoParent();
     }
 }

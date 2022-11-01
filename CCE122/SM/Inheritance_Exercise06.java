@@ -22,7 +22,7 @@ class Square extends Rectangle {
     }
 }
 
-class InEx06 {
+class Inheritance_Exercise06 {
     public static void main(String[] args) {
         Square sqr = new Square();
         sqr.printShapeInfo();

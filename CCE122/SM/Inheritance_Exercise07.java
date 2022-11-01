@@ -2,10 +2,11 @@ class Quadrilateral {
     protected double x1, x2, x3, x4, y1, y2, y3, y4;
 }
 
-class Point extends Quadrilateral{
-    protected void setCoordinate(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
+class Point extends Quadrilateral {
+    protected void setCoordinate(double x1, double y1, double x2, double y2, double x3, double y3, double x4,
+            double y4) {
         this.x1 = x1;
-        this.y1 = y1 ;
+        this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
         this.x3 = x3;
@@ -56,7 +57,8 @@ class Trapezoid extends Point {
 class Parallelogram extends Point {
     private double height;
 
-    Parallelogram(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double height) {
+    Parallelogram(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4,
+            double height) {
         setCoordinate(x1, y1, x2, y2, x3, y3, x4, y4);
         this.height = height;
     }
@@ -67,17 +69,17 @@ class Parallelogram extends Point {
     }
 }
 
-class InEx07 {
+class Inheritance_Exercise07 {
     public static void main(String[] args) {
         Square sq = new Square(10, 10, 20, 10, 20, 20, 10, 20);
         System.out.println("Area Of The Square is " + sq.area());
-        
+
         Rectangle rec = new Rectangle(10, 10, 30, 10, 30, 20, 10, 20);
         System.out.println("Area Of The Rectangle is " + rec.area());
-        
+
         Parallelogram p = new Parallelogram(10, 10, 30, 10, 20, 20, 0, 20, 8);
         System.out.println("Area Of The Parallelogram is " + p.area());
-        
+
         Trapezoid t = new Trapezoid(10, 10, 30, 10, 40, 20, 0, 20, 8);
         System.out.println("Area Of The Trapezoid is " + t.area());
     }
