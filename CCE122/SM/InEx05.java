@@ -22,15 +22,18 @@ class Square extends Rectangle {
     }
 }
 
-class LnEx04 {
+class InEx05 {
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(10, 15);
-        rectangle.printArea();
-        rectangle.printPerimeter();
+        Square[] squares = new Square[10];
+        for (int i = 0; i < squares.length; i++) {
+            squares[i] = new Square(i);
+        }
 
-        Square square = new Square(5);
-        square.printArea();
-        square.printPerimeter();
+        for (int i = 0; i < squares.length; i++) {
+            System.out.println("Side Length: " + i);
+            squares[i].printArea();
+            squares[i].printPerimeter();
+            System.out.println();
+        }
     }
-
 }
